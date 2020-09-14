@@ -3,7 +3,7 @@ import warshipInfo from './Warship_stuff/warship_info.json'
 import './warships.css'
 
 
-
+const total = Object.values(warshipInfo.meta.total)
 const tirp = Object.values(warshipInfo.data[3667867440].name)
 const kurfurst = Object.values(warshipInfo.data[3340711728].name)
 const jB = Object.values(warshipInfo.data[3751753552].name)
