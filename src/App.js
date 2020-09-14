@@ -14,8 +14,7 @@ function App() {
      <Warships />
      <Facts />
 
-     <Button variant="contained" color="primary">Happy Button!</Button>
-     <Button variant="contained" color="primary">Another Button!</Button>
+     
     </div>
   );
 }
