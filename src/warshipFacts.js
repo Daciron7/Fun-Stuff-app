@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React from 'react'
 import warshipInfo from './Warship_stuff/warship_info.json'
 import './warshipFacts.css'
 
