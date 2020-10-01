@@ -3,6 +3,7 @@ import warshipInfo from './Warship_stuff/warship_info.json'
 import './warships.css'
 
 
+
 const total = Object.values(warshipInfo.meta.total)
 const tirp = Object.values(warshipInfo.data[3667867440].name)
 const kurfurst = Object.values(warshipInfo.data[3340711728].name)
@@ -19,6 +20,7 @@ class Warships extends Component {
         <div>
             
             <h1>Total number of warships: {total.length}</h1>
+            
             <h3>Personal Favorites</h3>
             <p>{tirp}</p>
             <p>{kurfurst}</p>
