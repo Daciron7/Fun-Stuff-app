@@ -17,7 +17,7 @@ import Typography from '@material-ui/core/Typography';
 //const fetchBattleships = () => {
 //  Axios
 //    .get('https://api.worldofwarships.com/wows/encyclopedia/ships/?application_id=29d1975c9a6318643adf2940214e7b5f&type=Battleship',  {
-//      headers: { 'x-api-key': process.env.REACT_APP_WORLD_OF_WARSHIPS_API_KEY}
+//      headers: { 'x-api-key': process.env.REACT_WARSHIPS_API_KEY}
 //    })
 //    .then(function (response) {
 //      setBattleshipData({
