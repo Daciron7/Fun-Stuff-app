@@ -1,7 +1,12 @@
 import React from 'react';
-import './App.css';
-import Warships from './Warships'
-import Facts from './warshipFacts'
+import {Route, Switch} from 'react-router-dom'
+//import './App.css';
+
+import WarshipFacts from './warshipFacts'
+import Layout from './Layout'
+import Esports from './esports';
+
+//import {FunStuffContextProvider} from './contexts/FunStuffContext'
 
 
 
@@ -9,13 +14,17 @@ import Facts from './warshipFacts'
 
 function App() {
   return (
+    
     <div className="App">
-      
-     <Warships />
-     <Facts />
-
+      <Layout />
+      <Switch>
+     <Route path="/esports" component={Esports} />
+     <Route path="/warshipfacts" component={WarshipFacts} />
+     
+      </Switch>
      
     </div>
+    
   );
 }
 

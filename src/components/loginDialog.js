@@ -1,0 +1,128 @@
+import React, { useContext } from 'react'
+import { Box, Dialog, TextField, Button, makeStyles } from '@material-ui/core'
+import { Formik } from 'formik'
+import * as Yup from 'yup'
+import { AuthContext } from '../contexts/AuthContext'
+
+const useStyles = makeStyles(() => ({
+  dialogContent: {
+    display: 'flex',
+    flexDirection: 'column',
+    minHeight: 500,
+    minWidth: 500,
+    padding: 20,
+  },
+}))
+
+const LoginDialog = (props) => {
+  const classes = useStyles()
+  const { open, onClose } = props
+
+  const authContext = useContext(AuthContext)
+
+  const handleClose = () => {
+    onClose(false)
+  }
+
+  return (
+    <Dialog open={open} onClose={handleClose} aria-labelledby='Login Dialog'>
+      <Formik
+        initialValues={{
+          username: 'Bill123',
+          email: 'bill67@myplace.com',
+          password: 'Thisis@Password2',
+          submit: null,
+        }}
+        validationSchema={Yup.object().shape({
+          username: Yup.string()
+            .max(50)
+            .required('You must place in a username'),
+          email: Yup.string()
+            .email('Must be a valid email')
+            .max(50)
+            .required('Email is required'),
+          password: Yup.string()
+            .min(8, 'Password is too short!')
+            .max(50, 'Password is too long!')
+            .required('Password is required'),
+        })}
+        onSubmit={ (values, { setErrors, setStatus, setSubmitting }) => {
+          try {
+            authContext.login()
+            console.log(values.email, values.password)
+            handleClose()
+          } catch (err) {
+            console.error(err)
+          }
+        }}
+      >
+        {({
+          values,
+          errors,
+          touched,
+          handleChange,
+          handleBlur,
+          handleSubmit,
+          isSubmitting,
+        }) => (
+          <form noValidate autoComplete='off' onSubmit={handleSubmit} className={classes.dialogContent}>
+            <h2>Sign in</h2>
+            <TextField
+              autoFocus
+              label='User Name'
+              type='username'
+              name='username'
+              variant='filled'
+              margin='normal'
+              onChange={handleChange}
+              onBlur={handleBlur}
+              value={values.email}
+              error={Boolean(touched.username && errors.username)}
+              helperText={touched.username && errors.username}
+              required
+              fullWidth
+              />
+            <TextField
+              autoFocus
+              label='Email Address'
+              type='email'
+              name='email'
+              variant='filled'
+              margin='normal'
+              onChange={handleChange}
+              onBlur={handleBlur}
+              value={values.email}
+              error={Boolean(touched.email && errors.email)}
+              helperText={touched.email && errors.email}
+              required
+              fullWidth
+            />
+            <TextField
+              label='Password'
+              type='password'
+                variant='filled'
+                name='password'
+              margin='normal'
+                placeholder='********'
+                value={values.password}
+                onChange={handleChange}
+                onBlur={handleBlur}
+                error={Boolean(touched.password && errors.password)}
+                helperText={touched.password && errors.password}
+                required
+                fullWidth
+            />
+            <Box>
+              <Button color='primary' variant='contained' onClick={handleClose}>
+                Cancel
+              </Button>
+              <Button color='primary' variant='contained' type='submit' disabled={Boolean(errors.email || errors.password)}>Login</Button>
+            </Box>
+          </form>
+        )}
+      </Formik>
+    </Dialog>
+  )
+}
+
+export default LoginDialog
