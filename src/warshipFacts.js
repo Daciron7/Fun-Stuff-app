@@ -107,6 +107,16 @@ export default function WarshipFacts() {
           </Typography>
         </AccordionDetails>
       </Accordion>
+      <Accordion square expanded={expanded === 'panel4'} onChange={handleChange('panel4')}>
+        <AccordionSummary aria-controls="panel4d-content" id="panel4d-header">
+          <Typography>{ragnarok}</Typography>
+        </AccordionSummary>
+        <AccordionDetails>
+          <Typography>
+            {ragnarokInfo}
+          </Typography>
+        </AccordionDetails>
+      </Accordion>
     </div>
   );
 }
