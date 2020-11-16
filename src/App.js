@@ -18,8 +18,8 @@ function App() {
     <div className="App">
       <Layout />
       <Switch>
-     <Route path="/esports" component={Esports} />
-     <Route path="/warshipfacts" component={WarshipFacts} />
+     <Route path="/components/esports" component={Esports} />
+     <Route path="/components/warshipfacts" component={WarshipFacts} />
      
       </Switch>
      
