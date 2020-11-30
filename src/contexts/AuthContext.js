@@ -1,5 +1,5 @@
 import React, { useEffect, createContext, useReducer } from 'react'
-import firebase from '../node_modules/firebase'
+import firebase from '../lib/firebase'
 
 const initialAuthState = {
     isAuthenticated: false,
