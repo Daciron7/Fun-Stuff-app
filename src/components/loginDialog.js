@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React, {useContext } from 'react'
 import { Box, Dialog, TextField, Button, makeStyles } from '@material-ui/core'
 import { Formik } from 'formik'
 import * as Yup from 'yup'
@@ -19,6 +19,16 @@ const LoginDialog = (props) => {
   const { open, onClose } = props
 
   const authContext = useContext(AuthContext)
+  const { signInWithGoogle, signInWithEmailAndPassword } = authContext
+
+  const handleGoogleClick = async () => {
+    try {
+      await signInWithGoogle()
+      handleClose()
+    } catch (error) {
+      console.error(error)
+    }
+  }
 
   const handleClose = () => {
     onClose(false)
@@ -26,17 +36,22 @@ const LoginDialog = (props) => {
 
   return (
     <Dialog open={open} onClose={handleClose} aria-labelledby='Login Dialog'>
+      <Button
+        className={classes.googleButton}
+        fullWidth
+        onClick={handleGoogleClick}
+        size="large"
+        variant="contained"
+      >
+        <img alt="Google" className={classes.providerIcon} src="/static/images/google.svg"/>
+        </Button>
       <Formik
         initialValues={{
-          username: 'Bill123',
-          email: 'bill67@myplace.com',
-          password: 'Thisis@Password2',
+          email: 'foo@example.com',
+          password: 'dkj8u4(&#Ldljad',
           submit: null,
         }}
         validationSchema={Yup.object().shape({
-          username: Yup.string()
-            .max(50)
-            .required('You must place in a username'),
           email: Yup.string()
             .email('Must be a valid email')
             .max(50)
@@ -46,13 +61,16 @@ const LoginDialog = (props) => {
             .max(50, 'Password is too long!')
             .required('Password is required'),
         })}
-        onSubmit={ (values, { setErrors, setStatus, setSubmitting }) => {
+        onSubmit={ async (values, { setErrors, setStatus, setSubmitting }) => {
           try {
-            authContext.login()
+            await signInWithEmailAndPassword(values.email, values.password)
             console.log(values.email, values.password)
             handleClose()
           } catch (err) {
             console.error(err)
+            setStatus({ success: false })
+            setErrors({ submit: err.message })
+            setSubmitting(false)
           }
         }}
       >
@@ -67,21 +85,6 @@ const LoginDialog = (props) => {
         }) => (
           <form noValidate autoComplete='off' onSubmit={handleSubmit} className={classes.dialogContent}>
             <h2>Sign in</h2>
-            <TextField
-              autoFocus
-              label='User Name'
-              type='username'
-              name='username'
-              variant='filled'
-              margin='normal'
-              onChange={handleChange}
-              onBlur={handleBlur}
-              value={values.email}
-              error={Boolean(touched.username && errors.username)}
-              helperText={touched.username && errors.username}
-              required
-              fullWidth
-              />
             <TextField
               autoFocus
               label='Email Address'

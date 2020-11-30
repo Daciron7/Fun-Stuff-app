@@ -12,8 +12,8 @@ import {
 import MenuIcon from '@material-ui/icons/Menu'
 import { NavLink } from 'react-router-dom'
 
-import loginDialog from '../components/loginDialog'
-import { AuthContext } from '../contexts/AuthContext'
+import LoginDialog from 'components/LoginDialog'
+import { AuthContext } from 'contexts/AuthContext'
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -112,7 +112,7 @@ export default function ButtonAppBar() {
           </ListItem>
         </List>
       </Drawer>
-      <loginDialog open={loginOpen} onClose={handleAuth}/>
+      <LoginDialog open={loginOpen} onClose={handleAuth}/>
     </div>
   )
 }
