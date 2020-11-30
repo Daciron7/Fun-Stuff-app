@@ -43,11 +43,11 @@ const LoginDialog = (props) => {
         size="large"
         variant="contained"
       >
-        <img alt="Google" className={classes.providerIcon} src="/static/images/google.svg"/>
+        Sign in with Google
         </Button>
       <Formik
         initialValues={{
-          email: 'foo@example.com',
+          email: 'Bob@myplace.com',
           password: 'dkj8u4(&#Ldljad',
           submit: null,
         }}
