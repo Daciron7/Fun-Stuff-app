@@ -1,6 +1,6 @@
 import React, { useState, useContext } from 'react'
 import {
-    Appbar,
+    AppBar,
     Toolbar,
     IconButton,
     makeStyles,
@@ -75,7 +75,7 @@ export default function ButtonAppBar() {
 
   return (
     <div className={classes.root}>
-      <Appbar position='static'>
+      <AppBar position='static'>
         <Toolbar>
           <IconButton
             edge='start'
@@ -97,7 +97,7 @@ export default function ButtonAppBar() {
             <Button color='inherit' onClick={handleAuth}>Login</Button>
           }
         </Toolbar>
-      </Appbar>
+      </AppBar>
       <Drawer open={drawerOpen} onClose={handleDrawerToggle}>
         <List className={classes.list}>
           <ListItem>
