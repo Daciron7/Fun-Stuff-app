@@ -1,29 +1,50 @@
 import React from 'react';
-import {Route, Switch} from 'react-router-dom'
-//import './App.css';
+import {Route} from 'react-router-dom'
+import './App.css';
 
-import WarshipFacts from './warshipFacts'
+import WarshipFacts from './components/warshipFacts'
 import Layout from './Layout'
-import Esports from './esports';
+import Landing from './components/Landing'
+import Esports from './components/esports';
 
-//import {FunStuffContextProvider} from './contexts/FunStuffContext'
+import {FunStuffContextProvider} from './contexts/FunStuffContext'
+import { CSSTransition } from 'react-transition-group'
 
 
+const routes = [
+  { path: '/esports', Component: Esports },
+  { path: '/warshipFacts', Component: WarshipFacts },
+  
+  { path: '/', Component: Landing }
+]
 
 
 
 function App() {
   return (
     
-    <div className="App">
+  <FunStuffContextProvider>
+    <div className='App'>
       <Layout />
-      <Switch>
-     <Route path="/components/esports" component={Esports} />
-     <Route path="/components/warshipfacts" component={WarshipFacts} />
-     
-      </Switch>
-     
+      {routes.map(({ path, Component }) => (
+        <Route key={path} exact path={path}>
+          {({ match }) => (
+            <CSSTransition
+             in={match !== null}
+             timeout={300}
+              classNames='fade'
+             unmountOnExit
+            >
+             <div className='fade'>
+               <Component />
+             </div>
+           </CSSTransition>
+          )}
+        </Route>
+      ))}
+      
     </div>
+  </FunStuffContextProvider>
     
   );
 }
