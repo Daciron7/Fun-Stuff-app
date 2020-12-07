@@ -27,5 +27,5 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 
 ## About App
 
-This app is a basic build app that uses info from the online game World of Warships. Most of the info deals with some of the warships that are featured in the game.
+This is Fun Stuff app, which includes some fun things including some ship info from World of Warships, different esports teams from League of Legends, and a fun GraphicQL plugin.
 
