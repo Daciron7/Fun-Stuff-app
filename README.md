@@ -29,3 +29,10 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 
 This is Fun Stuff app, which includes some fun things including some ship info from World of Warships, different esports teams from League of Legends, and a fun GraphicQL plugin.
 
+## Esports Teams
+This component of the app lists the different esports of League of Legends in card format. You can view the code here, [link](my-app/public/src/components/esports.js)
+
+## Warships Ship Info
+This component displays a collaspible list of warships and brief descriptions of said ships as well as an image of the said ship. You can check out the code here, [link](my-app/public/src/components/warshipFacts.js)
+
+
