@@ -12,7 +12,7 @@ import {
 import MenuIcon from '@material-ui/icons/Menu'
 import { NavLink } from 'react-router-dom'
 
-import LoginDialog from './components/LoginDialog'
+import LoginDialog from './components/loginDialog'
 import { AuthContext } from './contexts/AuthContext'
 
 const useStyles = makeStyles((theme) => ({
