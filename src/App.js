@@ -3,7 +3,7 @@ import {Route} from 'react-router-dom'
 import './App.css';
 
 import WarshipFacts from './components/warshipFacts'
-import Layout from './components/Layout'
+import Layout from './Layout'
 import Landing from './components/Landing'
 import Esports from './components/esports';
 
