@@ -26,7 +26,7 @@ const useStyles = makeStyles({
 
 const Esports = (props) => {
   const classes = useStyles()
-  const league = props.Esports
+ // const league = props.Esports
  
 
   return (
@@ -35,12 +35,12 @@ const Esports = (props) => {
         <CardMedia
           component='img'
           alt='Leagues'
-          image={'https://cdn.dev.pandascore.co/images/league/image/4450'}
-          title={'Leagues'}
+          image={''}
+          title={''}
         />
         <CardContent>
           <Typography gutterBottom variant='h5' component='h2'>
-            {league}
+            {''}
           </Typography>
           <Typography variant='body2' color='textSecondary' component='div'>
            
