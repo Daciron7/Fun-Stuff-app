@@ -35,4 +35,6 @@ This component of the app lists the different esports of League of Legends in ca
 ## Warships Ship Info
 This component displays a collaspible list of warships and brief descriptions of said ships as well as an image of the said ship. You can check out the code here, [link](my-app/public/src/components/warshipFacts.js)
 
+## GraphQL addition
+This component displays an addition of an api from GraphQL. 
 

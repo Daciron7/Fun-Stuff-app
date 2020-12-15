@@ -15,7 +15,7 @@ export const FunStuffContextProvider = (props) => {
         const fetchTeams = async (side) => {
             try {
                 const response = await axios.get(
-                    'https://api.pandascore.co/lol/teams?page[size]=5',
+                    'https://api.pandascore.co/lol/teams',
                     {
                         headers: { 'x-api-key': process.env.REACT_APP_ESPORTS_API_KEY },
                     },

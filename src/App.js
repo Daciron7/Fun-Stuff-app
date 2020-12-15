@@ -6,6 +6,7 @@ import WarshipFacts from './components/warshipFacts'
 import Layout from './Layout'
 import Landing from './components/Landing'
 import Esports from './components/esports';
+import RickMortyStuff from './components/graphql'
 
 import {FunStuffContextProvider} from './contexts/FunStuffContext'
 import { CSSTransition } from 'react-transition-group'
@@ -14,7 +15,7 @@ import { CSSTransition } from 'react-transition-group'
 const routes = [
   { path: '/esports', Component: Esports },
   { path: '/warshipFacts', Component: WarshipFacts },
-  
+  {path: '/grapql', Component: RickMortyStuff },
   { path: '/', Component: Landing }
 ]
 
