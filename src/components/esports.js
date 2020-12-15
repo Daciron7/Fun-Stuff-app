@@ -36,7 +36,7 @@ const RandomCats = (props) => {
         <CardMedia
           component='img'
           alt='kitty'
-          image={''}
+          image={'https://api.thecatapi.com/v1/images/search'}
           title={'Kitty'}
         />
         <CardContent>
@@ -44,7 +44,7 @@ const RandomCats = (props) => {
             {cats}
           </Typography>
           <Typography variant='body2' color='textSecondary' component='div'>
-           
+           Learn More
           </Typography>
         </CardContent>
       </CardActionArea>
