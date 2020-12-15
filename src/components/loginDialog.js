@@ -3,6 +3,7 @@ import { Box, Dialog, TextField, Button, makeStyles } from '@material-ui/core'
 import { Formik } from 'formik'
 import * as Yup from 'yup'
 import { AuthContext } from '../contexts/AuthContext'
+import { blue } from '@material-ui/core/colors'
 
 const useStyles = makeStyles(() => ({
   dialogContent: {
@@ -11,6 +12,9 @@ const useStyles = makeStyles(() => ({
     minHeight: 500,
     minWidth: 500,
     padding: 20,
+  },
+  button: {
+    color: blue,
   },
 }))
 
