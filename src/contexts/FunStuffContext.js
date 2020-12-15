@@ -2,7 +2,7 @@ import React, {useContext, createContext, useState, useEffect} from 'react'
 import axios from 'axios'
 
 const FunStuffContext = createContext({
-    randomkitty: [],
+   randomkitty: [],
     
 })
 
@@ -16,13 +16,13 @@ export const FunStuffContextProvider = (props) => {
             try {
                 const response = await axios.get(
                     'https://api.thecatapi.com/v1/images/search',
-                    {
+                   {
                         headers: { 'x-api-key': process.env.REACT_APP_CAT_API_KEY },
-                    },
+                   },
                 )
-                const cats = await response.data.results[0].leagues
+                const cats = await response.data.results[0].cats
                 if (side === 'randomkitty') setRandomKitty(cats)
-            } catch (error) {
+           } catch (error) {
                 console.log(error)
             }
         }
@@ -31,11 +31,11 @@ export const FunStuffContextProvider = (props) => {
 
     return (
         <FunStuffContext.Provider value={
-            {randomkitty}
-        }>
+           {randomkitty}
+       }>
             {props.children}
         </FunStuffContext.Provider>
-    )
+   )
 }
 
 export const useFunStuffContext = () => useContext(FunStuffContext)

@@ -1,7 +1,7 @@
 import React from 'react'
 //import warshipInfo from './Warship_stuff/warship_info.json'
 import '../esports.css'
-import '../contexts/FunStuffContext'
+//import '../contexts/FunStuffContext'
 
 import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
