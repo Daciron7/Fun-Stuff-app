@@ -1,6 +1,7 @@
 import React from 'react'
 //import warshipInfo from './Warship_stuff/warship_info.json'
 import '../esports.css'
+import '../contexts/FunStuffContext'
 
 import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
@@ -24,9 +25,9 @@ const useStyles = makeStyles({
 
 
 
-const Esports = (props) => {
+const RandomCats = (props) => {
   const classes = useStyles()
- // const league = props.Esports
+  const cats = props.RandomCats
  
 
   return (
@@ -34,13 +35,13 @@ const Esports = (props) => {
       <CardActionArea>
         <CardMedia
           component='img'
-          alt='Leagues'
+          alt='kitty'
           image={''}
-          title={''}
+          title={'Kitty'}
         />
         <CardContent>
           <Typography gutterBottom variant='h5' component='h2'>
-            {''}
+            {cats}
           </Typography>
           <Typography variant='body2' color='textSecondary' component='div'>
            
@@ -51,7 +52,7 @@ const Esports = (props) => {
   )
 }
 
-export default Esports
+export default RandomCats
 
 
 

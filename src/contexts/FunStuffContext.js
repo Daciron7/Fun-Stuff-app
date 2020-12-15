@@ -2,36 +2,36 @@ import React, {useContext, createContext, useState, useEffect} from 'react'
 import axios from 'axios'
 
 const FunStuffContext = createContext({
-    esports: [],
+    randomkitty: [],
     
 })
 
 export const FunStuffContextProvider = (props) => {
-    const [esports, setEsports] = useState([])
+    const [randomkitty, setRandomKitty] = useState([])
 
 
     useEffect(() => {
         // fetch the data and set up state for it
-        const fetchLeagues = async (side) => {
+        const fetchCats = async (side) => {
             try {
                 const response = await axios.get(
-                    'https://api.pandascore.co/lol/leagues',
+                    'https://api.thecatapi.com/v1/images/search',
                     {
-                        headers: { 'x-api-key': process.env.REACT_APP_ESPORTS_API_KEY },
+                        headers: { 'x-api-key': process.env.REACT_APP_CAT_API_KEY },
                     },
                 )
-                const leagues = await response.data.results[0].leagues
-                if (side === 'teams') setEsports(leagues)
+                const cats = await response.data.results[0].leagues
+                if (side === 'randomkitty') setRandomKitty(cats)
             } catch (error) {
                 console.log(error)
             }
         }
-        fetchLeagues('leagues')
+        fetchCats('randomkitty')
     }, [])
 
     return (
         <FunStuffContext.Provider value={
-            {esports}
+            {randomkitty}
         }>
             {props.children}
         </FunStuffContext.Provider>
