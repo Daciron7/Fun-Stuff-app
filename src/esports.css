@@ -7,5 +7,6 @@ h1 {
 p{
     color: darkolivegreen;
     font-weight: 700;
+    background-color: grey;
     border: 4px solid darkseagreen;
 }

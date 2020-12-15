@@ -12,21 +12,21 @@ export const FunStuffContextProvider = (props) => {
 
     useEffect(() => {
         // fetch the data and set up state for it
-        const fetchTeams = async (side) => {
+        const fetchLeagues = async (side) => {
             try {
                 const response = await axios.get(
-                    'https://api.pandascore.co/lol/teams',
+                    'https://api.pandascore.co/lol/leagues',
                     {
                         headers: { 'x-api-key': process.env.REACT_APP_ESPORTS_API_KEY },
                     },
                 )
-                const teams = await response.data.results[0].teams
-                if (side === 'teams') setEsports(teams)
+                const leagues = await response.data.results[0].leagues
+                if (side === 'teams') setEsports(leagues)
             } catch (error) {
                 console.log(error)
             }
         }
-        fetchTeams('teams')
+        fetchLeagues('leagues')
     }, [])
 
     return (
