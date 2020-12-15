@@ -11,12 +11,16 @@ import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 //import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
-import { blueGrey } from '@material-ui/core/colors';
+
+
+
 
 const useStyles = makeStyles({
   root: {
     maxWidth: 345,
-    backgroundColor: blueGrey,
+    backgroundColor: '#ddd',
+    margin: '20px',
+    height: 600,
   },
   media: {
     height: 140,
@@ -27,7 +31,7 @@ const useStyles = makeStyles({
 
 const RandomCats = (props) => {
   const classes = useStyles()
-  const cats = props.RandomCats
+  
  
 
   return (
@@ -36,12 +40,12 @@ const RandomCats = (props) => {
         <CardMedia
           component='img'
           alt='kitty'
-          image={''}
+          image={'https://cdn2.thecatapi.com/images/bja.jpg'}
           title={'Kitty'}
         />
         <CardContent>
           <Typography gutterBottom variant='h5' component='h2'>
-            {cats}
+            A random cat.
           </Typography>
           <Typography variant='body2' color='textSecondary' component='div'>
            Learn More
