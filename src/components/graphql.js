@@ -120,7 +120,7 @@ const RickMortyStuff = () => {
                                     First Appearance: {character.episode[0].name}
                                 </Typography>
                                 <Typography variant='subtitle2' color='textSecondary'>
-                                    Air date: {character.episode[0].air_date}
+                                    Air Date: {character.episode[0].air_date}
                                 </Typography>
                             </CardContent>
                         </CardActionArea>
