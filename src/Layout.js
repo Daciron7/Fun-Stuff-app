@@ -14,6 +14,7 @@ import { NavLink } from 'react-router-dom'
 
 import LoginDialog from './components/loginDialog'
 import { AuthContext } from './contexts/AuthContext'
+import { green, lightBlue, lime } from '@material-ui/core/colors'
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -26,10 +27,13 @@ const useStyles = makeStyles((theme) => ({
       flexGrow: 1,
     },
     warshipfacts: {
-        color: 'lightblue',
+        color: lightBlue,
     },
     esports: {
-        color: 'green',
+        color: green,
+    },
+    rickmortystuff : {
+      color: lime,
     },
     navSpacing: {
         marginRight: '4rem',
@@ -92,6 +96,10 @@ export default function ButtonAppBar() {
           <NavLink to='/warshipFacts' className={classes.navSpacing}>
             Warship Facts
           </NavLink>
+          <NavLink to='/graphql' className={classes.navSpacing}>
+            Rick & Morty Stuff
+          </NavLink>
+
           {
             authContext.isAuth ? <Button color='inherit' onClick={handleAuth}>Logout</Button> :
             <Button color='inherit' onClick={handleAuth}>Login</Button>
@@ -108,6 +116,11 @@ export default function ButtonAppBar() {
           <ListItem>
           <NavLink to='/warshipFacts' className={classes.navSpacing} onClick={handleDrawerToggle}>
             Warship Facts
+          </NavLink>
+          </ListItem>
+          <ListItem>
+          <NavLink to='/graphql' className={classes.navSpacing} onClick={handleDrawerToggle}>
+            Rick & Morty Stuff
           </NavLink>
           </ListItem>
         </List>
