@@ -16,7 +16,7 @@ import { CSSTransition } from 'react-transition-group'
 const routes = [
   { path: '/esports', Component: RandomCats },
   { path: '/warshipFacts', Component: WarshipFacts },
-  {path: '/grapql', Component: RickMortyStuff },
+  {path: '/graphql', Component: RickMortyStuff },
   { path: '/', Component: Landing }
 ]
 
