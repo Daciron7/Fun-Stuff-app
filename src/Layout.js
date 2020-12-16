@@ -14,11 +14,12 @@ import { NavLink } from 'react-router-dom'
 
 import LoginDialog from './components/loginDialog'
 import { AuthContext } from './contexts/AuthContext'
-import { green, lightBlue, lime } from '@material-ui/core/colors'
+//import { green, lightBlue, lime } from '@material-ui/core/colors'
 
 const useStyles = makeStyles((theme) => ({
     root: {
       flexGrow: 1,
+      backgroundColor: '#808000',
     },
     menuButton: {
       marginRight: theme.spacing(2),
@@ -27,13 +28,13 @@ const useStyles = makeStyles((theme) => ({
       flexGrow: 1,
     },
     warshipfacts: {
-        color: lightBlue,
+        color: '#ADD8E6',
     },
     esports: {
-        color: green,
+        color: '#008000',
     },
     rickmortystuff : {
-      color: lime,
+      color: '#32CD32',
     },
     navSpacing: {
         marginRight: '4rem',
@@ -42,7 +43,7 @@ const useStyles = makeStyles((theme) => ({
     },
     list: {
         width: 250,
-        backgroundColor: '#A9A9A9'
+        backgroundColor: '#556B2F',
     },
 }))
 
