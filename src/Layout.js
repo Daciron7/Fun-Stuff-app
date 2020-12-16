@@ -20,13 +20,13 @@ import { AuthContext } from './contexts/AuthContext'
 const useStyles = makeStyles((theme) => ({
     root: {
       flexGrow: 1,
-      color: '#008394',
     },
     menuButton: {
       marginRight: theme.spacing(2),
     },
     title: {
       flexGrow: 1,
+      color: '#00695f'
     },
     warshipfacts: {
         color: '#ADD8E6',
