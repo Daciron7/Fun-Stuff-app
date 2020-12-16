@@ -15,7 +15,7 @@ export const FunStuffContextProvider = (props) => {
         const fetchCatFacts = async (side) => {
             try {
                 const response = await axios.get(
-                    'https://cat-fact.herokuapp.com/facts/text',
+                    'https://cat-fact.herokuapp.com/facts/',
                    //{
                    //     headers: { 'x-api-key': process.env.REACT_APP_CAT_API_KEY },
                    //},
