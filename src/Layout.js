@@ -14,12 +14,13 @@ import { NavLink } from 'react-router-dom'
 
 import LoginDialog from './components/loginDialog'
 import { AuthContext } from './contexts/AuthContext'
+//import { createMuiTheme } from '@material-ui/core/styles';
 //import { green, lightBlue, lime } from '@material-ui/core/colors'
 
 const useStyles = makeStyles((theme) => ({
     root: {
       flexGrow: 1,
-      backgroundColor: '#808000',
+      color: '#008394',
     },
     menuButton: {
       marginRight: theme.spacing(2),
