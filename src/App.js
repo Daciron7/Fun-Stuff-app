@@ -6,7 +6,7 @@ import WarshipFacts from './components/warshipFacts'
 import Layout from './Layout'
 import Landing from './components/Landing'
 import RandomCats from './components/esports'
-import RickMortyStuff from './components/graphql'
+import RickMortyStuff from './components/RickMortyStuff'
 
 import {FunStuffContextProvider} from './contexts/FunStuffContext'
 import { CSSTransition } from 'react-transition-group'

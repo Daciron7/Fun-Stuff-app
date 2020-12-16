@@ -1,16 +1,16 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
+import React from 'react'
+import ReactDOM from 'react-dom'
+import './index.css'
+import App from './App'
+import * as serviceWorker from './serviceWorker'
 import { BrowserRouter } from 'react-router-dom'
 import AuthContextProvider from './contexts/AuthContext'
-import { ApolloClient, InMemoryCache, ApolloProvider } from '@apollo/client';
+import { ApolloClient, InMemoryCache, ApolloProvider } from '@apollo/client'
 
 const client = new ApolloClient({
-  url: 'https://rickandmortyapi.com/graphql/',
-  cache: new InMemoryCache()
-});
+  uri: 'https://rickandmortyapi.com/graphql/',
+  cache: new InMemoryCache(),
+})
 
 
 
@@ -24,8 +24,8 @@ ReactDOM.render(
       </BrowserRouter>
     </AuthContextProvider>
   </React.StrictMode>,
-  document.getElementById('root')
-);
+  document.getElementById('root'),
+)
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
