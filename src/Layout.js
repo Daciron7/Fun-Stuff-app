@@ -26,7 +26,6 @@ const useStyles = makeStyles((theme) => ({
     },
     title: {
       flexGrow: 1,
-      color: '#00695f'
     },
     warshipfacts: {
         color: '#ADD8E6',
@@ -98,7 +97,7 @@ export default function ButtonAppBar() {
           <NavLink to='/warshipFacts' className={classes.navSpacing}>
             Warship Facts
           </NavLink>
-          <NavLink to='/graphql' className={classes.navSpacing}>
+          <NavLink to='/RickMortyStuff' className={classes.navSpacing}>
             Rick & Morty Stuff
           </NavLink>
 
@@ -121,7 +120,7 @@ export default function ButtonAppBar() {
           </NavLink>
           </ListItem>
           <ListItem>
-          <NavLink to='/graphql' className={classes.navSpacing} onClick={handleDrawerToggle}>
+          <NavLink to='/RickMortyStuff' className={classes.navSpacing} onClick={handleDrawerToggle}>
             Rick & Morty Stuff
           </NavLink>
           </ListItem>
