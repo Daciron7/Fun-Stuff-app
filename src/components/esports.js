@@ -31,7 +31,7 @@ const useStyles = makeStyles({
 
 const RandomCats = (props) => {
   const classes = useStyles()
-  
+  const text = props.randomCats
  
 
   return (
@@ -45,10 +45,7 @@ const RandomCats = (props) => {
         />
         <CardContent>
           <Typography gutterBottom variant='h5' component='h2'>
-            A random cat.
-          </Typography>
-          <Typography variant='body2' color='textSecondary' component='div'>
-           Learn More
+            {text}
           </Typography>
         </CardContent>
       </CardActionArea>
