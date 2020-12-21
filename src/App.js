@@ -5,7 +5,7 @@ import './App.css';
 import WarshipFacts from './components/warshipFacts'
 import Layout from './Layout'
 import Landing from './components/Landing'
-import RandomCats from './components/esports'
+import RandomCats from './components/randomCat'
 import RickMortyStuff from './components/RickMortyStuff'
 
 import {FunStuffContextProvider} from './contexts/FunStuffContext'
@@ -14,9 +14,9 @@ import { CSSTransition } from 'react-transition-group'
 
 
 const routes = [
-  { path: '/esports', Component: RandomCats },
+  { path: '/randomCat', Component: RandomCats },
   { path: '/warshipFacts', Component: WarshipFacts },
-  {path: '/graphql', Component: RickMortyStuff },
+  {path: '/RickMortyStuff', Component: RickMortyStuff },
   { path: '/', Component: Landing }
 ]
 

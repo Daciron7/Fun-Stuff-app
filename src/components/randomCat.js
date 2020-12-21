@@ -31,7 +31,7 @@ const useStyles = makeStyles({
 
 const RandomCats = (props) => {
   const classes = useStyles()
-  const text = props.randomCats
+  
  
 
   return (
@@ -40,12 +40,12 @@ const RandomCats = (props) => {
         <CardMedia
           component='img'
           alt='kitty'
-          image={'https://cdn2.thecatapi.com/images/bja.jpg'}
+          image={'kitty'}
           title={'Kitty'}
         />
         <CardContent>
           <Typography gutterBottom variant='h5' component='h2'>
-            {text}
+           A random cat
           </Typography>
         </CardContent>
       </CardActionArea>

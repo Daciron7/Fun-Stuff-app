@@ -1,6 +1,7 @@
 import React, {useContext, createContext, useState, useEffect} from 'react'
 import axios from 'axios'
 
+
 const FunStuffContext = createContext({
    randomfact: [],
     
@@ -14,12 +15,8 @@ export const FunStuffContextProvider = (props) => {
         // fetch the data and set up state for it
         const fetchCatFacts = async (side) => {
             try {
-                const response = await axios.get(
-                    'https://cat-fact.herokuapp.com/facts/',
-                   //{
-                   //     headers: { 'x-api-key': process.env.REACT_APP_CAT_API_KEY },
-                   //},
-                )
+                axios.defaults.headers.common['x-api-key'] = process.env.REACT_APP_CAT_API_KEY
+                let response = await axios.get('https://api.thecatapi.com/v1/images/search')
                 const facts = await response.data.results[0].cats
                 if (side === 'randomkitty') setRandomKitty(facts)
            } catch (error) {

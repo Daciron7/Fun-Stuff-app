@@ -94,8 +94,8 @@ export default function ButtonAppBar() {
           >
             <MenuIcon />
           </IconButton>
-          <NavLink to='/esports' className={classes.navSpacing}>
-            Esports
+          <NavLink to='/randomCat' className={classes.navSpacing}>
+            Random Cats
           </NavLink>
           <NavLink to='/warshipFacts' className={classes.navSpacing}>
             Warship Facts
@@ -113,8 +113,8 @@ export default function ButtonAppBar() {
       <Drawer open={drawerOpen} onClose={handleDrawerToggle}>
         <List className={classes.list}>
           <ListItem>
-          <NavLink to='/esports' className={classes.navSpacing} onClick={handleDrawerToggle}>
-            Esports
+          <NavLink to='/randomCat' className={classes.navSpacing} onClick={handleDrawerToggle}>
+            Random Cats
           </NavLink>
           </ListItem>
           <ListItem>
