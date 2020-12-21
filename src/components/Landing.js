@@ -23,7 +23,7 @@ const Landing = () => {
                 isAuthenticated ?
             <h1>Welcome to Fun Stuff!</h1>
                     :
-            <h1>You need to register or login to see the all of the data for Fun Stuff.</h1>
+            <h1>HOLD UP! You need to register or login to access any data for FunStuff.</h1>
             }
         </Box>
         

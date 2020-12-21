@@ -47,7 +47,7 @@ const LoginDialog = (props) => {
         size="large"
         variant="contained"
       >
-        Sign in with Google
+        <img src='../static\images/google.png' alt="Sign in with Google"/>
         </Button>
       <Formik
         initialValues={{
