@@ -29,7 +29,9 @@ const useStyles = makeStyles(() => ({
       },
       card: {
         width: 345,
+        height: 200,
         margin: 20,
+        color: '#B0C4DE'
       },
 }))
 
