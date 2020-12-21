@@ -28,7 +28,7 @@ const useStyles = makeStyles(() => ({
         textAlign: 'center',
       },
       card: {
-        width: 345,
+        width: 300,
         height: 200,
         margin: 20,
         color: '#B0C4DE'
